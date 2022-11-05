@@ -6,6 +6,13 @@
     <title>Danroy's Portfolio.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @media screen and (min-width = 500px) {
+            body{
+                overflow-y: hidden;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="sticky top-0 z-50">
@@ -114,7 +121,7 @@
             </div>
         </div>
     </header>
-    <section class="main hero md:w-full md:overflow-hidden bg-one ">
+    <section class="main hero md:w-full md:overflow-hidden lg:overflow-y-hidden bg-one">
         <div class="w-full flex flex-col md:flex-row justify-between h-screenrelative">
             <div class="w-full md:w-1/2 fold-container relative">
                 <div class="md:w-full image-container relative">
@@ -131,7 +138,7 @@
                         But most people call me bof Ndung'u.
                     </h1>
                     <h1 class="text-lg tex-white my-5">
-                        I am a Web Developer, Graphics Designer, Illustrator and Cinematographer.
+                        I am a Software Developer, Web Developer, Graphics Designer, Illustrator and Cinematographer.
                     </h1>
                     <div class="flex flex-row justify-center w-full items-center">
                         <div class="flex flex-row w-full space-x-6 justify-center overflow-y-hidden">
@@ -207,36 +214,5 @@
     </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-<script>
-    if($('.burger-icon')){
-        const burgerIcon = $('.burger-icon');
-        const closeIcon = $('.close-icon');
-        const mobileNav = $('.mobile-nav-links');
-
-        $(burgerIcon).click(()=>{
-            $(burgerIcon).hide("slow","linear");
-            $(closeIcon).show("slow","linear");
-            $(mobileNav).show("fast","linear");
-        });
-
-        $(closeIcon).click(()=>{
-            $(closeIcon).hide("slow","linear");
-            $(mobileNav).hide("slow","linear");
-            $(burgerIcon).show("slow","linear");
-        });
-    }
-    if($('.show-contact')){
-        const showContact = $('.show-contact')
-        const closeContact = $('.close-contact')
-        const contactBox  = $('.contact-box');
-
-        $(showContact).click(()=>{
-            contactBox.removeClass("hidden");
-        });
-        $(closeContact).click(()=>{
-            contactBox.addClass("hidden");
-        });
-    }
-
-</script>
+<script src="main.js"></script>
 </html>
