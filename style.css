@@ -1,7 +1,3 @@
-body{
-    overflow-y: hidden;
-}
-
 .nav-link a{
     transition: all .3s ease-in-out;
     color: white;
