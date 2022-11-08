@@ -27,3 +27,9 @@ if($('.show-contact')){
         contactBox.addClass("hidden");
     });
 }
+
+if($('.construction')){
+    $('.construction').click(()=>{
+        alert('The page is currently under construction')
+    });
+}
