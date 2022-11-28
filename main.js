@@ -30,6 +30,66 @@ if($('.show-contact')){
 
 if($('.construction')){
     $('.construction').click(()=>{
-        alert('The page is currently under construction')
+        alert('The page is currently under construction');
+    });
+}
+
+if($('.carousel')){
+    var activeItem = $('.active');
+    var carouselItems = document.querySelectorAll('.carousel-item');
+    var itemsTotal = carouselItems.length;
+
+    setInterval(
+        function(){
+            carouselChanger(activeItem, carouselItems, itemsTotal);
+        }, 1000);
+}
+
+function carouselChanger(active, itemsList, listTotal){
+    $(itemsList).each((index,item)=>{
+        if($(item).hasClass("active") && $(item).hasClass("carousel-item") && index != (listTotal-1)){
+            setTimeout(()=>{
+                if($(item).hasClass("-translate-x-full")){
+                    $(item).addClass("-translate-x-full");
+                    $(item).addClass("hidden");
+                    $(item).removeClass("active");
+                    $(carouselItems[index+1]).addClass("active");
+                    $(carouselItems[index+1]).removeClass("hidden");
+                    $(carouselItems[index+1]).removeClass("-translate-x-full");
+                    carouselChanger($(".active"),itemsList,listTotal)
+                }
+                else{
+                    $(item).addClass("-translate-x-full");
+                    $(item).addClass("hidden");
+                    $(item).removeClass("active");
+                    $(carouselItems[index+1]).addClass("active");
+                    $(carouselItems[index+1]).removeClass("hidden");
+                    $(carouselItems[index+1]).removeClass("translate-x-full");
+                    carouselChanger($(".active"),itemsList,listTotal)
+                }
+            },3000);
+        }
+        else if($(item).hasClass("active") && $(item).hasClass("carousel-item") && index == (listTotal-1)){
+            setTimeout(()=>{
+                if($(item).hasClass("-translate-x-full")){
+                    $(item).addClass("-translate-x-full");
+                    $(item).addClass("hidden");
+                    $(item).removeClass("active");
+                    $(carouselItems[index+1]).addClass("active");
+                    $(carouselItems[index+1]).removeClass("hidden");
+                    $(carouselItems[index+1]).removeClass("translate-x-full");
+                    carouselChanger($(".active"),itemsList,listTotal)
+                }
+                else{
+                    $(item).addClass("-translate-x-full");
+                    $(item).addClass("hidden");
+                    $(item).removeClass("active");
+                    $(carouselItems[0]).addClass("active");
+                    $(carouselItems[0]).removeClass("hidden");
+                    $(carouselItems[0]).removeClass("-translate-x-full");
+                    carouselChanger($(".active"),itemsList,listTotal)
+                }
+            },3000);
+        }
     });
 }

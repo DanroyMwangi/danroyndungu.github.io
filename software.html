@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- The slider -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+
 </head>
 <body>
     <header class="sticky top-0 z-50">
@@ -275,130 +279,148 @@
                 </div>
             </div>
         </div>
-        <div class="projects flex flex-col text-white">
-            <div class="projects-heading">
+        <div class="projects flex flex-col">
+            <div class="projects-heading mb-4">
                 <h1 class="text-4xl md:text-6xl text-center">
                     Projects
                 </h1>
             </div>
-            
-            <div class="police-project w-full my-6 flex flex-col ">
-                <div class="project-heading">
-                    <h1 class="text-xl md:text-2xl text-center underline">
-                        Web Based Application to Catalogue Criminal Dossiers in Police Stations
-                    </h1>
-                </div>
-                <div class="flex flex-col md:flex-row md:mx-10 md:space-x-12 my-6">
-                    <div class="description w-full md:w-1/6">
-                        <p class="w-full text-lg">
+            <div class="police-project text-black flex flex-col md:w-11/12 md:justify-center md:my-6 md:mx-auto md:flex md:flex-row">
+                <div class="project-details-tab flex flex-col md:w-1/3 bg-white rounded-t-xl md:rounded-l-xl bg-gray-300">
+                    <div class="project-details-header flex flex-col bg-gray-100 rounded-t-xl md:rounded-tl-xl">
+                        <div class="px-2 py-4">
+                            <h1 class="text-xl md:text-2xl text-start font-bold">
+                                Web Based Application to Catalogue Criminal Dossiers in Police Stations
+                            </h1>
+                        </div>
+                        <div class="flex flex-row justify-between items-center w-full bg-gray-200 px-2 py-4">
+                            <span class="text-lg flex flex-row items-center w-max">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 font-semibold">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                </svg>
+                                <span class="font-semibold">
+                                    2022
+                                </span>
+                            </span>
+                            <span class="flex flex-row-reverse px-4 w-max space-x-3 ">
+                                <i class="devicon-django-plain transition hover:text-gray-600 text-2xl" title="Django"></i>
+                                <i class="devicon-python-plain transition hover:text-gray-600 text-2xl" title="Python"></i>
+                                <i class="devicon-mysql-plain transition hover:text-gray-600 text-2xl" title="MySQL"></i>
+                                <i class="devicon-tailwindcss-plain transition hover:text-gray-600 text-2xl" title="TailwindCSS"></i>
+                                <i class="devicon-javascript-plain transition hover:text-gray-600 text-2xl" title="JavaScript"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="description w-full px-2 py-4">
+                        <p class="w-full text-base break-normal">
                             This is my latest school project. It is the main project I undertook as my 3rd year project. It is a system that eliminates all manual work the police undertake in police station and converts their analogue methods into digital ones. It is fully digitized with the ability to book criminals, associate crimes with criminals, generate OBs, track OBs, transfer cases from one station to another, et. al.
                         </p>
                     </div>
-                    <div class="md:w-5/6 police-photos md:grid md:grid-cols-2 md:grid-rows-flow md:gap-4">
-                        <div class="flex flex-col items-center my-4">
-                            <div>
-                                <img src="Projects/police-citizen (2).png" alt="">
+                </div>
+                <div class="flex flex-col relative w-full md:w-2/3 overflow-hidden rounded-b-xl md:rounded-r-xl">
+                    <div class="carousel w-full flex flex-row overflow-x-auto bg-white">
+                        <div class="flex flex-col carousel-item w-full h-full text-center items-center justify-center active transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/police-citizen (2).png" class="w-full"  alt="...">
                             </div>
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Landing Page
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/police-citizen (3).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Report crime without logging in
-                                </span>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3 text-center">Landing Page</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/police-citizen (1).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Citizen profile details
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/police-citizen (3).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Report crime without logging in</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/police-citizen (4).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Report crime as a logged in citizen
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/police-citizen (1).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Citizen profile details</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (1).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Record OB
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/police-citizen (4).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Report crime as a logged in citizen</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (2).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Track and View OBs
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (1).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Record OB</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (3).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    View police stations and add new ones to the repository
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (2).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Track and View OBs</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (4).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    View, Approve, Transfer case files
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (3).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">View police stations and add new ones to the repository</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (5).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Compile all information related to a specific case and view them
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (4).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">View, approve, transfer case files</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (6).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Officer profile dashboard
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (5).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Compile all information related to a specific case and view them</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (7).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    View the list of officers in a station
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (6).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Officer profile dashboard</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (8).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    View the criminals booked in a specific station
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (7).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">View the list of officers in a station</span>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center my-4">
-                            <img src="Projects/officer-dash (9).png" alt="">
-                            <div>
-                                <span class="text-center text-base md:text-lg">
-                                    Book criminal
-                                </span>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (8).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">View the criminals booked in a specific station</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col carousel-item w-full hidden transition-all">
+                            <div class="img-container w-full h-max">
+                                <img src="Projects/officer-dash (9).png" class="w-full h-max"  alt="...">
+                            </div>
+                            <div class="img-description flex h-full w-full justify-center">
+                                <span class="text-base md:text-4xl py-3">Book criminal</span>
                             </div>
                         </div>
                     </div>
@@ -408,5 +430,6 @@
     </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 <script src="main.js"></script>
 </html>
