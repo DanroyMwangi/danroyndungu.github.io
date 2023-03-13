@@ -14,7 +14,7 @@
     font-size: 1.2rem;
 }
 .nav-link a:hover div svg{
-    transform: translate(135px);
+    transform: translate(140px);
 }
 .nav-link a:hover div small{
     display: block;
