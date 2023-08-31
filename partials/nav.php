@@ -28,7 +28,7 @@ switch($number) {
 ?>
 
 <header class="sticky top-0 z-50">
-        <nav class="nav-bar flex flex-row justify-between bg-<?= $color; ?> w-full p-4 text-white items-center">
+        <nav class="nav-bar flex flex-row justify-between bg-black w-full p-4 text-white items-center">
             <div class="nav-brand flex w-1/3">
                 <a href="index.php">
                     <h2 class="text-xl md:text-xl text-white">
