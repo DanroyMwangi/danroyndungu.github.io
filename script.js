@@ -45,6 +45,28 @@ if($('.carousel')){
         }, 1000);
 }
 
+// Nav-bar random colour
+if($('.nav-bar')){
+    const navBar = $('.nav-bar');
+    const mobileNavBar = $('.mobile-nav-links');
+
+    var randomNumber = getRandomNumber(1, 6);
+    var bgClass = `bg-${numberToWord(randomNumber)}`;
+    navBar.remove('bg-black');
+    mobileNavBar.remove('bg-black');
+    navBar.addClass(bgClass);
+    mobileNavBar.addClass(bgClass);
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function numberToWord(num) {
+    const numberNames = ["one", "two", "three", "four", "five", "six"];
+    return numberNames[num - 1];
+}
+
 function carouselChanger(active, itemsList, listTotal){
     $(itemsList).each((index,item)=>{
         if($(item).hasClass("active") && $(item).hasClass("carousel-item") && index != (listTotal-1)){
