@@ -54,7 +54,7 @@ switch($number) {
                             </svg>
                         </div>
                         <div>
-                            <small class="">
+                            <small class="text-sm">
                                 Software Dev
                             </small>
                         </div>
@@ -68,7 +68,7 @@ switch($number) {
                             </svg>
                         </div>
                         <div>
-                            <small class="">
+                            <small class="text-sm">
                                 Cinematography
                             </small>
                         </div>
@@ -82,7 +82,7 @@ switch($number) {
                             </svg>
                         </div>
                         <div>
-                            <small class="">
+                            <small class="text-sm">
                                 Graphics Design
                             </small>
                         </div>
@@ -99,7 +99,7 @@ switch($number) {
                         </svg>
                     </div>
                     <div>
-                        <small class="">
+                        <small class="text-sm">
                             Software Dev
                         </small>
                     </div>
@@ -113,7 +113,7 @@ switch($number) {
                         </svg>
                     </div>
                     <div>
-                        <small class="">
+                        <small class="text-sm">
                             Cinematography
                         </small>
                     </div>
@@ -127,7 +127,7 @@ switch($number) {
                         </svg>
                     </div>
                     <div>
-                        <small class="">
+                        <small class="text-sm">
                             Graphics Design
                         </small>
                     </div>

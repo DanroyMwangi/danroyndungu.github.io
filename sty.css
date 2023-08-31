@@ -8,6 +8,36 @@
     user-select: none;
 }
 
+.svg-container {
+    position: relative;
+}
+
+.svg-filled, .svg-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s; /* Adjust duration as desired */
+}
+
+.svg-filled {
+    opacity: 0; /* Initially, the filled SVG is hidden */
+    z-index: 1; /* Place it below the outlined SVG */
+}
+
+.svg-outline {
+    opacity: 1; /* Initially, the outlined SVG is visible */
+    z-index: 2; /* Place it above the filled SVG */
+}
+
+.svg-container:hover .svg-filled {
+    opacity: 1; /* Reveal the filled SVG on hover */
+}
+
+.svg-container:hover .svg-outline {
+    opacity: 0; /* Hide the outlined SVG on hover */
+}
+
+
 .psycho{
     font-family: serial-killer;
 }
@@ -79,31 +109,8 @@
 .bg-six{
     background-image: radial-gradient(circle 5px at top left, rgba(226, 226, 226,0.1) 0%, rgba(226, 226, 226,0.1) 50%,rgba(201, 201, 201,0.1) 50%, rgba(201, 201, 201,0.1) 30%,transparent 30%, transparent 50%),linear-gradient(90deg, rgb(6,102,21),rgb(6,102,21)); background-size: 11px 11px;
 }
-.bg-final{
-    --pattern-4: (
-    @grid: 1 / 100%;
-    background-color: #332B33;
-    background-image: @doodle(
-        :doodle {
-            @grid: 1 / 10000px;
-            transform: scale(1.5) rotate(45deg);
-        }
-        background-size: 50px 50px;
-        background-image: @doodle(
-            :doodle {
-            @grid: 8x1 / 90%;
-            border-radius: 0% 60%;
-            }
-            position: absolute;
-            border: 1px solid #BCB8BB;
-            @nth(1) { border-radius: 0% 60%; }
-            @size: calc(100% - 100% / @I * (@i - 1));
-            background: linear-gradient(
-            45deg, @stripe(transparent, #BCB8BB 1px, transparent)
-            );
-        );
-        );
-    );
+.bg-seven{
+    background-image: radial-gradient(circle 5px at top left, rgba(226, 226, 226,0.1) 0%, rgba(226, 226, 226,0.1) 50%,rgba(201, 201, 201,0.1) 50%, rgba(201, 201, 201,0.1) 30%,transparent 30%, transparent 50%),linear-gradient(90deg, rgb(94, 6, 102),rgb(94, 6, 102)); background-size: 11px 11px;
 }
 .web-dev{
     animation: rotation 10s infinite linear;
